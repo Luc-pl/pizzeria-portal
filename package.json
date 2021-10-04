@@ -8,6 +8,7 @@
     "start:react": "react-scripts start",
     "start-and-test": "run-p start-silent test ",
     "build": "react-scripts build",
+    "lint": "esw --watch --clear",
     "test": "react-scripts test --noStackTrace",
     "test-all": "react-scripts test --watchAll=false --noStackTrace",
     "test-related": "react-scripts test --watchAll=false --noStackTrace --findRelatedTests",
@@ -55,6 +56,7 @@
     "yarn": "^1.22.15"
   },
   "devDependencies": {
+    "eslint-watch": "^7.0.0",
     "husky": "^7.0.2",
     "lint-staged": "^11.2.0",
     "redux-devtools-extension": "^2.13.9"
