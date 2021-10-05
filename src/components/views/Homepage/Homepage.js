@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Login.module.scss';
+import styles from './Homepage.module.scss';
 
-const Login = props => {
+const Homepage = props => {
   return (
     <div className={styles.component}>
-      <h2>Login view</h2>
+      <h2>Homepage view</h2>
     </div>
   );
 };
 
-Login.propTypes = {
+Homepage.propTypes = {
   children: PropTypes.node,
 };
 
-export default Login;
+export default Homepage;

@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Login.module.scss';
+import styles from './Kitchen.module.scss';
 
-const Login = props => {
+const Kitchen = props => {
   return (
     <div className={styles.component}>
-      <h2>Login view</h2>
+      <h2>Kitchen view</h2>
     </div>
   );
 };
 
-Login.propTypes = {
+Kitchen.propTypes = {
   children: PropTypes.node,
 };
 
-export default Login;
+export default Kitchen;
