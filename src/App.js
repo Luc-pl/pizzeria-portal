@@ -1,15 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { Switch } from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './components/views/Login/Login';
 import MainLayout from './components/layout/MainLayout/MainLayout';
 import Homepage from './components/views/Homepage/Homepage';
-import Tables from '.components/views/Tables/Tables';
-import TablesBooking from '.components/views/TablesBooking/TablesBooking';
-import TablesEvents from '.components/views/TablesEvents/TablesEvents';
-import Waiter from '.components/views/Waiter/Waiter';
-import WaiterOrder from '.components/views/WaiterOrder/WaiterOrder';
-import Kitchen from '.components/views/Kitchen/Kitchen';
+import Tables from './components/views/Tables/Tables';
+import TablesBooking from './components/views/TablesBooking/TablesBooking';
+import TablesEvents from './components/views/TablesEvents/TablesEvents';
+import Waiter from './components/views/Waiter/Waiter';
+import WaiterOrder from './components/views/WaiterOrder/WaiterOrder';
+import Kitchen from './components/views/Kitchen/Kitchen';
 
 
 function App() {
