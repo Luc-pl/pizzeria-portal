@@ -3,3 +3,22 @@
 .component {
   padding: $base-size;
 }
+
+.paperStyle {
+  padding: 20px;
+  height: '70vh';
+  width: 400px;
+  margin: 20px auto;
+}
+
+.avatarStyle {
+  background-color: #2B4C6F
+}
+
+h2 {
+  font-family: 'Roboto';
+}
+
+Grid {
+  margin: 20px 0 20px 0;
+}
