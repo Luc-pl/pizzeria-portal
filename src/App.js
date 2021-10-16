@@ -11,7 +11,7 @@ import WaiterOrder from './components/views/WaiterOrder/WaiterOrder';
 import Kitchen from './components/views/Kitchen/Kitchen';
 import { StylesProvider } from '@mui/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Provider } from 'react';
+import { Provider } from 'react-redux';
 import store from './redux/store';
 
 const theme = createTheme({
