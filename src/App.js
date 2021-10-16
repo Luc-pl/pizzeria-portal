@@ -6,7 +6,7 @@ import Homepage from './components/views/Homepage/Homepage';
 import Tables from './components/views/Tables/Tables';
 import TablesBooking from './components/views/TablesBooking/TablesBooking';
 import TablesEvents from './components/views/TablesEvents/TablesEvents';
-import Waiter from './components/views/Waiter/Waiter';
+import Waiter from './components/views/Waiter/WaiterContainer';
 import WaiterOrder from './components/views/WaiterOrder/WaiterOrder';
 import Kitchen from './components/views/Kitchen/Kitchen';
 import { StylesProvider } from '@mui/styles';
