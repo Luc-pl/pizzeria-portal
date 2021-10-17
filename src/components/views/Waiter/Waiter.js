@@ -17,6 +17,7 @@ class Waiter extends React.Component {
       error: PropTypes.oneOfType([PropTypes.bool,PropTypes.string]),
     }),
     tables: PropTypes.any,
+    fetchChangeStatus: PropTypes.func,
   }
 
   componentDidMount(){
@@ -24,34 +25,47 @@ class Waiter extends React.Component {
     fetchTables();
   }
 
-  renderActions(status){
+  changeTableStatus(row) {
+    const status = row.status;
+    switch (status) {
+      case 'free': {row.status = 'thinking'; break;}
+      case 'thinking': {row.status = 'ordered'; break;}
+      case 'ordered': {row.status = 'prepared'; break;}
+      case 'prepared': {row.status = 'delivered'; break;}
+      case 'delivered': {row.status = 'paid'; break;}
+      case 'paid': {row.status = 'free'; break;}
+      default: {row.status = 'free'; break;}
+    }
+    const {fetchChangeStatus} = this.props;
+    fetchChangeStatus(row);
+  }
+
+  renderActions(row){
+    const status = row.status;
     switch (status) {
       case 'free':
         return (
-          <>
-            <Button>thinking</Button>
-            <Button>new order</Button>
-          </>
+          <Button onClick={() => {this.changeTableStatus(row); }}>thinking</Button>
         );
       case 'thinking':
         return (
-          <Button>new order</Button>
+          <Button onClick={() => {this.changeTableStatus(row); }}>new order</Button>
         );
       case 'ordered':
         return (
-          <Button>prepared</Button>
+          <Button onClick={() => {this.changeTableStatus(row); }}>prepared</Button>
         );
       case 'prepared':
         return (
-          <Button>delivered</Button>
+          <Button onClick={() => {this.changeTableStatus(row);}}>delivered</Button>
         );
       case 'delivered':
         return (
-          <Button>paid</Button>
+          <Button onClick={() => {this.changeTableStatus(row); }}>paid</Button>
         );
       case 'paid':
         return (
-          <Button>free</Button>
+          <Button onClick={() => {this.changeTableStatus(row); }}>free</Button>
         );
       default:
         return null;
