@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Homepage.module.scss';
 
-const Homepage = props => {
+const Homepage = () => {
   return (
     <div className={styles.component}>
       <h2>Homepage view</h2>

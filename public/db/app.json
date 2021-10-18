@@ -204,8 +204,6 @@
     ],
     "orders":[
     ],
-    "tables":[   
-    ],
     "event": [
       {
         "id": 1,
@@ -258,6 +256,11 @@
         "starters": ["lemonWater"]
       }
     ],
-    "booking": []
+    "booking": [],
+    "tables": [
+      {"id": 1, "status": "free", "order": null},
+      {"id": 2, "status": "thinking", "order": null},
+      {"id": 3, "status": "ordered", "order": 123}
+    ]
 
  }

@@ -115,15 +115,15 @@ const renderActions = (status, singleTable) => {
   switch (status) {
     case 'free':
       return (
-        <Button component={Link} to={`${process.env.PUBLIC_URL}/table/booking/new`}>Free</Button>
+        <Button component={Link} to={`${process.env.PUBLIC_URL}/tables/booking/new`}>Free</Button>
       );
     case 'booked':
       return (
-        <Button component={Link} to={`${process.env.PUBLIC_URL}/table/booking/${singleTable.bookingId}`}>Booked</Button>  
+        <Button component={Link} to={`${process.env.PUBLIC_URL}/tables/booking/${singleTable.bookingId}`}>Booked</Button>  
       );
     case 'event':
       return (
-        <Button component={Link} to={`${process.env.PUBLIC_URL}/table/events/${singleTable.bookingId}`}>Event</Button>
+        <Button component={Link} to={`${process.env.PUBLIC_URL}/tables/events/${singleTable.bookingId}`}>Event</Button>
       );
     default:
       return null;
@@ -152,7 +152,7 @@ const Tables = () => (
                   <TableCell 
                     component='tr'
                     className={styles.link}
-                    to={`${process.env.PUBLIC_URL}/table/booking/${singleTable.bookingId}`}
+                    to={`${process.env.PUBLIC_URL}/tables/booking/${singleTable.bookingId}`}
                     key={singleTable.id}>{renderActions(singleTable.status, singleTable)}
                   </TableCell>
                 );
