@@ -256,11 +256,85 @@
         "starters": ["lemonWater"]
       }
     ],
-    "booking": [],
+    "booking": [
+       {
+         "id": 1,
+         "date": "2021-10-18",
+         "hour": "10:00",
+         "table": 1,
+         "duration": 4,
+         "ppl": 4,
+         "starters": ["water"],
+         "orderType": ["online"]
+       },
+       {
+         "id": 2,
+         "date": "2021-10-18",
+         "hour": "11:00",
+         "table": 2,
+         "duration": 1,
+         "ppl": 2,
+         "starters": ["water"],
+         "orderType": ["offline"]
+       },
+       {
+         "id": 3,
+         "date": "2021-10-18",
+         "hour": "12:00",
+         "table": 1,
+         "duration": 4,
+         "ppl": 4,
+         "starters": ["water"],
+         "orderType": ["offline"]
+       },
+       {
+         "id": 4,
+         "date": "2021-10-18",
+         "hour": "13:00",
+         "table": 1,
+         "duration": 4,
+         "ppl": 4,
+         "starters": ["water"],
+         "orderType": ["online"]
+       },
+       {
+         "id": 5,
+         "date": "2021-10-18",
+         "hour": "15:00",
+         "table": 1,
+         "duration": 4,
+         "ppl": 4,
+         "starters": ["water"],
+         "orderType": ["online"]
+       }
+    ],
     "tables": [
       {"id": 1, "status": "free", "order": null},
       {"id": 2, "status": "thinking", "order": null},
       {"id": 3, "status": "ordered", "order": 123}
+    ],
+    "kitchen": [
+      {
+         "id": 1,
+         "table": 3,
+         "dish": "Nonna Alba's Pizza",
+         "status": "ready",
+         "order": 123
+       },
+       {
+         "id": 2,
+         "table": 1,
+         "dish": null,
+         "status": "not ready",
+         "order": null
+       },
+       {
+         "id": 3,
+         "table": 2,
+         "dish": "Nonno Alberto's Salad",
+         "status": "ready",
+         "order": 234
+       }
     ]
 
  }
