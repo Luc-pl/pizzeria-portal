@@ -42,7 +42,7 @@ export const fetchChangeStatusAPI = (row) => {
     Axios
       .get(`${api.url}/api/${api.tables}${row.id}`, row)
       .then(res => {
-        dispatch(fetchChangeStatus(res.data));
+        dispatch(fetchChangeStatusAPI(res.data));
       })
       .catch(err => {
         dispatch(fetchError(err.message || true));
