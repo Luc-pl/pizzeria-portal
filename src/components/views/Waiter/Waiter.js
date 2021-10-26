@@ -25,47 +25,32 @@ class Waiter extends React.Component {
     fetchTables();
   }
 
-  changeTableStatus(row) {
-    const status = row.status;
-    switch (status) {
-      case 'free': {row.status = 'thinking'; break;}
-      case 'thinking': {row.status = 'ordered'; break;}
-      case 'ordered': {row.status = 'prepared'; break;}
-      case 'prepared': {row.status = 'delivered'; break;}
-      case 'delivered': {row.status = 'paid'; break;}
-      case 'paid': {row.status = 'free'; break;}
-      default: {row.status = 'free'; break;}
-    }
-    const {fetchChangeStatus} = this.props;
-    fetchChangeStatus(row);
-  }
-
   renderActions(row){
     const status = row.status;
     switch (status) {
       case 'free':
         return (
-          <Button onClick={() => {this.changeTableStatus(row); }}>thinking</Button>
+          <Button onClick={() => {this.props.fetchChangeStatus(row.id, 'thinking' );}}>thinking</Button>
         );
       case 'thinking':
         return (
-          <Button onClick={() => {this.changeTableStatus(row); }}>new order</Button>
+          <Button onClick={() => {this.props.fetchChangeStatus(row.id, 'new order');}}>new order</Button>
         );
       case 'ordered':
         return (
-          <Button onClick={() => {this.changeTableStatus(row); }}>prepared</Button>
+          <Button onClick={() => {this.props.fetchChangeStatus(row.id, 'prepared');}}>prepared</Button>
         );
       case 'prepared':
         return (
-          <Button onClick={() => {this.changeTableStatus(row);}}>delivered</Button>
+          <Button onClick={() => {this.props.fetchChangeStatus(row.id, 'delivered');}}>delivered</Button>
         );
       case 'delivered':
         return (
-          <Button onClick={() => {this.changeTableStatus(row); }}>paid</Button>
+          <Button onClick={() => {this.props.fetchChangeStatus(row.id, 'paid');}}>paid</Button>
         );
       case 'paid':
         return (
-          <Button onClick={() => {this.changeTableStatus(row); }}>free</Button>
+          <Button onClick={() => {this.props.fetchChangeStatus(row.id, 'free');}}>free</Button>
         );
       default:
         return null;

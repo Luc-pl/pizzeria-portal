@@ -37,12 +37,12 @@ export const fetchFromAPI = () => {
   };
 };
 
-export const fetchChangeStatusAPI = (row) => {
+export const fetchChangeStatusAPI = (tableId, newStatus) => {
   return (dispatch) => {
     Axios
-      .get(`${api.url}/api/${api.tables}${row.id}`, row)
+      .put(`${api.url}/api/${api.tables}/${tableId}`, { status: newStatus })
       .then(res => {
-        dispatch(fetchChangeStatusAPI(res.data));
+        dispatch(fetchChangeStatus(res.data));
       })
       .catch(err => {
         dispatch(fetchError(err.message || true));
